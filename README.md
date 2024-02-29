@@ -1,70 +1,69 @@
-# Стартовий шаблон для HTML/CSS/JS розробки
-Стартовий шаблон.
+# Starter Template for HTML/CSS/JS Development
+Starter template.
 ***
 
-## Структура
-`/src/` - папка для source коду
+## Structure
+`/src/` - folder for source code
 
-`/build/` -  тут буде кінцей зібраний проект
+`/build/` - the final project will be assembled here
 
-`/gulp/` - папка з задачами для [gulp](http://gulpjs.com/)
+`/gulp/` - folder with tasks for [gulp](http://gulpjs.com/)
 ***
 
-## Структура src
-`/fonts/` - шрифти -> копіюються в `build/css/fonts`
+## Structure of src
+`/fonts/` - fonts -> copied to `build/css/fonts`
 
-`/img/` -  картинки -> копіюються в `build/img`
+`/img/` - images -> copied to `build/img`
 
-`/img/icons/` - генерується спрайт із всіх картнок що містяться у папці -> спрайт зберігається `build/img`, стилі та міксіни для спрайтів зберігаються в `/scss/lib/_sprite.sass`
+`/img/icons/` - sprite is generated from all images in the folder -> sprite is saved in `build/img`, styles and mixins for sprites are saved in `/scss/lib/_sprite.sass`
 
-`/img/svg/` -  генерується svg шрифт із всіх картнок що містяться у папці --> шрифт зберігається в `build/css/fonts`
+`/img/svg/` - SVG font is generated from all images in the folder -> font is saved in `build/css/fonts`
 
-`/js/` - js код
+`/js/` - JavaScript code
 
-`/lib/` - зберігаються всі bower залежності
+`/lib/` - all bower dependencies are stored here
 
-`/partials/` - html шаблони, можна інклудити за допомогою коментарів, [детально тут](https://www.npmjs.com/package/gulp-include)
+`/partials/` - HTML templates, can be included using comments, [details here](https://www.npmjs.com/package/gulp-include)
 
-`/scss/` - scss, [scss документація](http://sass-lang.com/)
+`/scss/` - SCSS, [SCSS documentation](http://sass-lang.com/)
 ***
 
-## Установка
-+   Установити [Ruby](https://www.ruby-lang.org/ru/downloads/) 
-+   Установити gem залежності [sass](http://sass-scss.ru/install/) i [scss-lint](https://github.com/brigade/scss-lint)
+## Installation
++   Install [Ruby](https://www.ruby-lang.org/ru/downloads/)
++   Install gem dependencies [sass](http://sass-scss.ru/install/) and [scss-lint](https://github.com/brigade/scss-lint)
 
 		$ gem install sass
 		$ gem install scss_lint
 
-+   Установити [node.js](https://github.com/creationix/nvm)
-+   Установити глобально bower, gulp
-+   Скачати репозиторій і установити npm i bower залежності, виконавши в папці проекту команди
++   Install [node.js](https://github.com/creationix/nvm)
++   Install bower and gulp globally
++   Download the repository and install npm i bower dependencies, executing the following commands in the project folder
 
 		$ bower install
 		$ npm install
 
-+   Зібрати проект та запустити gulp
++   Build the project and run gulp
 
 		$ gulp build
 		$ gulp
 
 ***
 
-## Gulp задачі
+## Gulp Tasks
 
-задачі gulp-cli описані тут [gulp cli doc](https://github.com/gulpjs/gulp/blob/master/docs/CLI.md)
+Gulp-cli tasks are described here [gulp cli doc](https://github.com/gulpjs/gulp/blob/master/docs/CLI.md)
 
-Назва задачі  | Команда для запуску  | Опис
+Task Name      | Command to Run      | Description
 ------------- | -------------------- | -----
-**copy**      | `gulp copy`          | Копіювання фалів `src -> build`
-**html**      | `gulp html`          | Збирання `html` файлів
-**svgFont**   | `gulp svgFont`       | Генерування іконочного шрифту з svg картинок
-**js**        | `gulp js`            | Збиранні компілювання та мінімізація `js` файлів
-**jsLint**    | `gulp jsLint`        | Лінтинг `js` коду
-**sass**      | `gulp sass`          | Компілювання та мінімізація `scss` та `sass`
-**scssLint**  | `gulp scssLint`      | Лінтинг `scss` коду
-**server**    | `gulp server`        | Запуск сервера
-**sprite**    | `gulp sprite`        | Генерування спрайтів з папки `src/icons`, та генерування стилів та міксінів для них `/scss/lib/_sprite.sass`
-**clean**     | `gulp clean`         | Очищення папки `build`
-**default**   | `gulp`               | Запуск спостерігачів за всіма файлами та перекомпіляція вразі зміни
-**build**     | `gulp build`         | Запуск всіх задач для повної збірки проекту
-
+**copy**      | `gulp copy`          | Copy files from `src` to `build`
+**html**      | `gulp html`          | Compile `html` files
+**svgFont**   | `gulp svgFont`       | Generate an icon font from SVG images
+**js**        | `gulp js`            | Compile, and minify `js` files
+**jsLint**    | `gulp jsLint`        | Linting of `js` code
+**sass**      | `gulp sass`          | Compile and minify `scss` and `sass`
+**scssLint**  | `gulp scssLint`      | Linting of `scss` code
+**server**    | `gulp server`        | Start the server
+**sprite**    | `gulp sprite`        | Generate sprites from the `src/icons` folder, and generate styles and mixins for them in `/scss/lib/_sprite.sass`
+**clean**     | `gulp clean`         | Clean the `build` folder
+**default**   | `gulp`               | Run watchers for all files and recompile on changes
+**build**     | `gulp build`         | Run all tasks for a complete project build
